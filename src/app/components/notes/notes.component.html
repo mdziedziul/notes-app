@@ -7,8 +7,8 @@
       <div class="note-body">{{note.body}}</div>
     </div>
     <div class="buttons">
-      <button routerLink="/edit-note/{{note._id}}" class="btn btn-no-border mr-1"><img class="btn-icon" src="assets/icons/pencil.svg"></button>
-      <button (click)="deleteNote(note._id)"class="btn btn-no-border delete-btn"><img class="btn-icon" src="assets/icons/bin.svg"></button>
+      <button routerLink="/edit-note/{{note._id}}" class="btn btn-no-border mr-1"><img class="btn-icon" src="assets/icons/pencil.svg" title="{{ 'edit' | translate}}"></button>
+      <button (click)="deleteNote(note._id)" class="btn btn-no-border delete-btn" title="{{ 'delete' | translate}}"><img class="btn-icon" src="assets/icons/bin.svg"></button>
     </div>
   </div>
 </div>
