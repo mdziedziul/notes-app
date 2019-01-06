@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PageHeaderSetts } from '../page-header/models/pageHeaderSetts';
 import { Note } from 'src/app/models/notes.model';
-import { NotesService } from 'src/app/services/notes/notes.service';
+import { NotesService } from '../../services/notes/notes.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({

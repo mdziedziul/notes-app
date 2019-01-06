@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PageHeaderSetts } from '../page-header/models/pageHeaderSetts';
 import { Note } from 'src/app/models/notes.model';
-import { NotesService } from 'src/app/services/notes/notes.service';
+import { NotesService } from '../../services/notes/notes.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DeleteNoteDialog } from '../delete-note-dialog/delete-note-dialog';

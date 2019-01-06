@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NotesService } from 'src/app/services/notes/notes.service';
+import { NotesService } from '../../services/notes/notes.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DeleteNoteDialog } from '../delete-note-dialog/delete-note-dialog';
 

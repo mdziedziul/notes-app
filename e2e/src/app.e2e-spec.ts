@@ -1,27 +1,16 @@
 import { AppPage } from './app.po';
 import { element, by, browser } from 'protractor';
 
-describe('workspace-project App', () => {
+describe('Notes App', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  // it('should display welcome message', () => {
-  //   page.navigateTo();
-  //   expect(page.getParagraphText()).toEqual('Welcome to notes!');
-  // });
-
-  // it('should return number of the notes', () => {
-  //   page.navigateTo();
-  //   let count = page.countNotes();
-  //   expect(count).toEqual(7);
-  // });
-
   it('should create new note', () => {
     page.navigateTo();
-    let count;
+    let count: number;
     page.countNotes().then(function(value) {
       count = value;
     });
@@ -39,6 +28,31 @@ describe('workspace-project App', () => {
     page.countNotes().then(function(value) {
       let countAfterAdd = value;
       expect(countAfterAdd).toBeGreaterThan(count);
+    });   
+  });
+
+  it('should delete note', () => {
+    page.navigateTo();
+    let count: number;
+    page.countNotes().then(function(value) {
+      count = value;
+    });
+    let firstNote = element.all(by.css('.note')).get(0);
+    let firstNoteTitle = firstNote.element(by.css('.note-name')).getText();
+    let firstNoteBody = firstNote.element(by.css('.note-body')).getText();
+    let deleteButton = firstNote.element(by.css('.delete-btn'));
+    deleteButton.click();
+    browser.waitForAngular();
+    let confirmButton = element(by.css('.modal-content')).element(by.css('.btn-primary'));
+    confirmButton.click();
+    browser.waitForAngular();
+    let newFirstNote = element.all(by.css('.note')).get(0);
+    expect(newFirstNote.element(by.css('.note-name')).getText()).not.toEqual(firstNoteTitle);
+    expect(newFirstNote.element(by.css('.note-body')).getText()).not.toEqual(firstNoteBody);
+
+    page.countNotes().then(function(value) {
+      let countAfterAdd = value;
+      expect(countAfterAdd).toBeLessThan(count);
     });   
   });
 });
