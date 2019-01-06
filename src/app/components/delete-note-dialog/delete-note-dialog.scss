@@ -1,0 +1,38 @@
+@import "~src/variables.scss";
+
+.modal-header {
+    font-size: 18px;
+    border: none;
+    width: 500px;
+    &>.close {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    button {
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.modal-footer {
+    border: 0;
+    &>.btn {
+        &:focus {
+            box-shadow: none;
+        }  
+    }
+}
+
+h4 {
+    font-size: 18px;
+}
+
+hr {
+    background-color: transparent;
+}
+
+.btn-icon {
+    height: 13px;
+}

@@ -1,0 +1,11 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">{{'delete' | translate}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('close')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">{{'deleteConfirmation' | translate}}</div>
+<div class="modal-footer">
+  <button type="button" ngbAutofocus class="btn btn-border d-flex align-items-center m-l-10" (click)="activeModal.close('no')"><img src="assets/icons/close.svg" class="btn-icon"/>{{'no' | translate}}</button>
+  <button type="button" class="btn btn-primary d-flex align-items-center m-l-10 main" (click)="activeModal.close('yes')"><img src="assets/icons/check.svg" class="btn-icon"/>{{'yes' | translate}}</button>
+</div>

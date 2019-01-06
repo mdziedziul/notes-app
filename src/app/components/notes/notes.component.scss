@@ -1,0 +1,66 @@
+$colors-list: #80D8FF #f9a59f #CCFF90 #EEEEEE #ffd180 #CFD8DC #f0f98e;
+$colors-length: length($colors-list);
+
+.note {
+  @for $i from 1 through $colors-length {
+    &:nth-of-type(#{$colors-length}n+#{$i}) {
+      background-color: nth($colors-list, $i);      
+    }
+  }  
+
+  position: relative;
+    margin: 5px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.25);
+    padding: 20px;
+    border-radius: 3px;
+
+    &:hover {
+        box-shadow: 0 2px 6px 0 rgba(0,0,0,0.7);
+    }
+
+    &:nth-child(3n) {
+        margin-right: 0px;
+    }
+    &:nth-child(3n + 1) {
+        margin-left: 0px;
+    }
+}
+
+.note-body {
+    max-height: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 60px;
+    text-align: justify;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.notes-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.note-content {
+    &:focus {
+        outline: none;
+    }
+}
+
+.buttons {
+    text-align: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+@media (max-width: 600px) {
+    .notes-list {
+        grid-template-columns: auto;  
+    }
+    .note {
+        margin: 8px 5px !important;
+    }
+}

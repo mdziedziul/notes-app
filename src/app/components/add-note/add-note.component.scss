@@ -1,0 +1,71 @@
+@import "~src/variables.scss";
+
+.note-form {
+    position: relative;
+    top: 20px;
+}
+
+.form-fields {
+    width: 500px;
+    margin: auto;
+    box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    background-color: $note-color;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.form-control {
+    border-radius: 3px;
+
+    &.is-invalid {
+        &:focus {
+            border-color: #dc3545;
+        }
+    }
+
+    &:focus {
+        border-color: $divider-color;
+        box-shadow: 0 2px 6px 0 rgba(0,0,0,0.25);
+    }
+}
+
+.form-control-input {
+    height: 35px;
+}
+
+.label {
+    color: $secondary-text-color;
+}
+
+textarea {
+    min-height: 170px;
+}
+
+.btn-icon {
+    height: 10px;
+}
+
+.alert {
+    color: red;
+    font-size: 11px;
+    padding-top: 0px;
+    padding-left: 0px;
+}
+
+.red {
+    color: red;
+    margin-left: 5px;
+}
+
+.btn-primary {
+    position: absolute; 
+    top: -40px;
+    right: 0px;
+}
+
+@media (max-width: 600px) {
+    .form-fields {
+        width: 100%;
+    }
+}

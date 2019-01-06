@@ -1,0 +1,26 @@
+@import "~src/variables.scss";
+
+.note-detail {
+    width: 500px; 
+    margin: auto;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15);
+    padding: 20px;
+    background-color: $note-color;
+    border-radius: 3px;
+}
+
+.label {
+    color: $secondary-text-color;
+    font-size: 14px;
+}
+
+.note-row {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .note-detail {
+        width: 100%;
+    }
+}

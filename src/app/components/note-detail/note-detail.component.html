@@ -1,0 +1,19 @@
+<app-page-header [setts]="headerSetts"></app-page-header>
+<div *ngIf="note" class="d-flex justify-content-end mb-4">
+    <button (click)="editNote()" class="btn btn-border mr-2"><img class="btn-icon" src="assets/icons/pencil.svg">{{ 'edit' | translate }}</button>
+    <button (click)="deleteNote(note._id)" class="btn btn-border"><img class="btn-icon" src="assets/icons/bin.svg">{{ 'delete' | translate }}</button>
+</div>
+<div *ngIf="note" class="note-detail">
+    <div class="note-row">
+        <div class="label">{{ 'noteTitle' | translate }}</div>
+        <div class="content">{{ note['name'] }}</div>
+    </div>
+    <div class="note-row">
+        <div class="label">{{ 'noteDescription' | translate }}</div>
+        <div class="content">{{ note['body'] }}</div>
+    </div>
+    <div class="note-row">
+        <div class="label">{{ 'createdDate' | translate }}</div>
+        <div class="content">{{note['createdDate'] | date:'medium'}}</div>
+    </div>
+</div>

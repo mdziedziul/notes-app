@@ -1,0 +1,22 @@
+img {
+    width: 16px;
+    margin-right: 10px;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.back {
+    position: relative;
+    top: -1px;
+}

@@ -1,0 +1,16 @@
+{
+    "backNote" : "Back to notes",
+    "createdDate" : "Creation date",
+    "delete" : "Delete",
+    "deleteConfirmation" : "Do you really want to remove this item?",
+    "edit" : "Edit",
+    "nameRequired" : "Name is required",
+    "new" : "New note",
+    "newNote" : "Add new note",
+    "no" : "No",
+    "noteDescription" : "Note",
+    "noteTitle" : "Note title",
+    "save" : "Save",
+    "showMore" : "Show more",
+    "yes" : "Yes"
+}

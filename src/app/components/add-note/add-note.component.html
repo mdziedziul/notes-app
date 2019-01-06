@@ -1,0 +1,25 @@
+<app-page-header [setts]="headerSetts"></app-page-header>
+<form *ngIf="newNote" #noteForm="ngForm" class="note-form">
+  <div class="form-fields mb-3">
+    <div class="form-group">
+      <label class="label mb-2">{{ 'noteTitle' | translate }}<span class="red">*</span></label>
+      <input 
+      class="form-control form-control-input" 
+      id="name" 
+      required 
+      [(ngModel)]="newNote.name" 
+      [ngClass] = "{ 'is-invalid': name.errors && name.touched }"
+      name="name" 
+      #name="ngModel">
+      <div [hidden]="name.valid || name.pristine"
+        class="alert">
+        {{ 'nameRequired' | translate }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="label mb-2 label-body">{{ 'noteDescription' | translate }}</label>
+      <textarea class="form-control" id="body" [(ngModel)]="newNote.body" name="body"></textarea>
+    </div>
+  </div>
+  <button [disabled]="!name.valid" (click)="saveNote()" class="btn btn-primary"><img class="btn-icon" src="assets/icons/check.svg">{{ 'save' | translate }}</button>
+</form>

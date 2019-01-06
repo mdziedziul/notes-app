@@ -1,0 +1,16 @@
+{
+    "backNote" : "Zpět na poznamky",
+    "createdDate" : "Datum vytvoření",
+    "delete" : "Smazat",
+    "deleteConfirmation" : "Opravdu chcete odstranit tuto položku?",
+    "edit" : "Upravit",
+    "nameRequired" : "Polozka jmeno je povinni",
+    "new" : "Nová poznamka",
+    "newNote" : "Přidat novú poznamku",
+    "no" : "Ne",
+    "noteDescription" : "Poznámka",
+    "noteTitle" : "Titul poznamky",
+    "save" : "Uložit",
+    "showMore" : "Ukazat víc",
+    "yes" : "Ano"
+}

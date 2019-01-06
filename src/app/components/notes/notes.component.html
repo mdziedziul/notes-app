@@ -1,0 +1,14 @@
+<button class="btn btn-primary mb-3" routerLink="/add-note"><img class="btn-icon" src="assets/icons/add.svg">{{'newNote' | translate}}</button>
+<div class="notes-list">
+  <div class="note" *ngFor="let note of notes">
+    <div class="note-content" routerLink="/note/{{note._id}}">
+      <a class="primary-text note-name" routerLink="/note/{{note._id}}"><img class="icon mb-1" src="assets/icons/note.svg">{{note.name}}</a>
+      <div class="secondary-text mb-1">{{note.createdDate | date:'medium'}}</div>
+      <div class="note-body">{{note.body}}</div>
+    </div>
+    <div class="buttons">
+      <button routerLink="/edit-note/{{note._id}}" class="btn btn-no-border mr-1"><img class="btn-icon" src="assets/icons/pencil.svg"></button>
+      <button (click)="deleteNote(note._id)"class="btn btn-no-border"><img class="btn-icon" src="assets/icons/bin.svg"></button>
+    </div>
+  </div>
+</div>
